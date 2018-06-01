@@ -2,15 +2,18 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { template } from './template.js';
+import { doctor } from './doctor.js';
+
+var Promise = require('es6-promise').Promise;
+
 
 $(document).ready(function() {
-  $('#starter-form').submit(function(event) {
+  $('#searchDoctor').submit(function(event) {
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = template(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+    let medicalIssue = $('#medicalIssue').val();
+    let doctorName = $('#doctorName').val();
+    $('#medicalIssue').val("");
+    $('#doctorName').val("");
+
   });
 });
