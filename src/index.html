@@ -2,9 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Doctor Lookup</title>
   </head>
   <body>
-    <h1>Template</h1>
+    <div class="container">
+      <h1>Lookup Doctors in Portland, Oregon.</h1>
+        <form id="searchDoctor">
+            <div class="form-group">
+              <label for="medicalIssue">Enter your medical issue:</label>
+              <input id="medicalIssue" placeholder="headache" type="text">
+            </div>
+            <div class="form-group">
+              <label for="doctorName">Name</label>
+              <input id="doctorName" placeholder="Smith" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Lookup Doctors</button>
+        </form>
+        <div id="ouput">
+          <div class="showErrors"></div>
+          <br>
+          <div class="showOutput"></div>
+        </div>
+    </div>
   </body>
 </html>
